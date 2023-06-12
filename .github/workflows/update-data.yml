@@ -1,0 +1,30 @@
+name: Update Data
+
+on:
+  # allows running this workflow manually
+  workflow_dispatch:
+
+jobs:
+  update_data:
+    name: Update Data
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install deps
+        run: npm install
+      - name: Prepare data
+        run: npm run prepare-data
+      - name: Run project
+        run: npm run start
+      - name: Deploy to github pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public/
+          publish_branch: data
+          force_orphan: true

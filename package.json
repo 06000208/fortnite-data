@@ -1,0 +1,27 @@
+{
+  "name": "fortnite-data",
+  "version": "0.0.1",
+  "description": "Structured data processed from the fortnite.fandom.com wiki",
+  "scripts": {
+    "clear-cache": "rimraf cache/fortnite_pages_current.xml cache/fortnite_pages_current.xml.7z",
+    "download-data": "nwget https://s3.amazonaws.com/wikia_xml_dumps/f/fo/fortnite_pages_current.xml.7z -O ./cache/fortnite_pages_current.xml.7z",
+    "extract-data": "node extract.js",
+    "prepare-data": "npm run clear-cache && npm run download-data && npm run extract-data"
+  },
+  "author": "06000208",
+  "license": "CC0-1.0",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "7zip-bin": "^5.2.0",
+    "fs-extra": "^11.1.1",
+    "luxon": "^3.3.0",
+    "node-7z": "^3.0.0",
+    "rimraf": "^5.0.1",
+    "wget-improved": "^3.3.1",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.7"
+  }
+}

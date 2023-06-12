@@ -40,4 +40,6 @@ Thumbs.db
 *.json
 !.eslintrc.json
 !jsconfig.json
+!package.json
+!package-lock.json
 temp
