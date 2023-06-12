@@ -6,7 +6,8 @@
     "clear-cache": "rimraf cache/fortnite_pages_current.xml cache/fortnite_pages_current.xml.7z",
     "download-data": "nwget https://s3.amazonaws.com/wikia_xml_dumps/f/fo/fortnite_pages_current.xml.7z -O ./cache/fortnite_pages_current.xml.7z",
     "extract-data": "node extract.js",
-    "prepare-data": "npm run clear-cache && npm run download-data && npm run extract-data"
+    "prepare-data": "npm run clear-cache && npm run download-data && npm run extract-data",
+    "start": "node index"
   },
   "author": "06000208",
   "license": "CC0-1.0",
