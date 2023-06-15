@@ -1,6 +1,6 @@
 {
   "name": "fortnite-data",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Structured data processed from the fortnite.fandom.com wiki",
   "scripts": {
     "clear-cache": "rimraf cache/fortnite_pages_current.xml cache/fortnite_pages_current.xml.7z",
@@ -15,9 +15,13 @@
   "type": "module",
   "dependencies": {
     "7zip-bin": "^5.2.0",
+    "cli-progress": "^3.12.0",
+    "fast-xml-parser": "^4.2.4",
     "fs-extra": "^11.1.1",
+    "lowdb": "^6.0.1",
     "luxon": "^3.3.0",
     "node-7z": "^3.0.0",
+    "node-fetch": "^3.3.1",
     "rimraf": "^5.0.1",
     "wget-improved": "^3.3.1",
     "yargs": "^17.7.2"
