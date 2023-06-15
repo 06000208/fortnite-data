@@ -29,6 +29,8 @@ const processableFiles = new Set();
 
 const progressBar = new SingleBar({
     format: "[{bar}] {percentage}% ({value}/{total}, ETA: {eta}s)",
+    noTTYOutput: true,
+    notTTYSchedule: 5000,
 }, Presets.legacy);
 
 // Main processing code
