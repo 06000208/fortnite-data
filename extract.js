@@ -3,17 +3,19 @@
 
 import { join } from "path";
 import { pathExists } from "fs-extra";
-import { path7za } from "7zip-bin";
+import sevenBin from "7zip-bin";
 import { directory } from "./modules/constants.js";
 import Seven from "node-7z"; // Doesn't have named exports
 
 const cacheDirectory = join(directory, "cache");
 const archivePath = join(directory, "cache", "fortnite_pages_current.xml.7z");
 
+const pathTo7zip = sevenBin.path7za;
+
 if (await pathExists(archivePath)) {
     console.log("found fortnite_pages_current.xml.7z, attempting to extract...");
     const stream = Seven.extractFull(archivePath, cacheDirectory, {
-        $bin: path7za,
+        $bin: pathTo7zip,
         overwrite: "s", // Skip extraction if file already exists
     });
     stream.on("error", (error) => console.error(error));
