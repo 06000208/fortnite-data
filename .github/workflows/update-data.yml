@@ -1,4 +1,4 @@
-name: Update Data
+name: update-data
 
 on:
   # allows running this workflow manually
@@ -6,7 +6,7 @@ on:
 
 jobs:
   update_data:
-    name: Update Data
+    name: update-data
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -24,7 +24,9 @@ jobs:
       - name: Extract data
         run: sudo npm run extract-data
       - name: Run project
-        run: npm run start
+        run: npm run 
+      - name: Copy data
+        run: npm run copy-data
       - name: Deploy to github pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -33,3 +35,8 @@ jobs:
           publish_branch: data
           force_orphan: true
           enable_jekyll: true
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: fortnite-json
+          path: ./cache/fortnite.json
