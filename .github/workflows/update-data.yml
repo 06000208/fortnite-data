@@ -17,8 +17,12 @@ jobs:
           node-version: 16
       - name: Install deps
         run: npm install
-      - name: Prepare data
-        run: npm run prepare-data
+      - name: Clear cache
+        run: npm run clear-cache
+      - name: Download data
+        run: npm run download-data
+      - name: Extract data
+        run: sudo npm run extract-data
       - name: Run project
         run: npm run start
       - name: Deploy to github pages
