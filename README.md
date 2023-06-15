@@ -1,0 +1,1 @@
+This folder is used by a github action to process & publish new versions of the data on a regular basis. It also contains a [plain text copy of Attribution-ShareAlike 3.0 Unported](./LICENSE), which the data is licensed under. Please refer to the project's README for more licensing information.
