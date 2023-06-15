@@ -11,6 +11,7 @@ const cacheDirectory = join(directory, "cache");
 const archivePath = join(directory, "cache", "fortnite_pages_current.xml.7z");
 
 const pathTo7zip = sevenBin.path7za;
+console.log("7z binary:", pathTo7zip);
 
 if (await pathExists(archivePath)) {
     console.log("found fortnite_pages_current.xml.7z, attempting to extract...");
