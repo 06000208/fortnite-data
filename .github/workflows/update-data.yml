@@ -24,7 +24,7 @@ jobs:
       - name: Extract data
         run: sudo npm run extract-data
       - name: Run project
-        run: npm run 
+        run: npm run start
       - name: Copy data
         run: npm run copy-data
       - name: Deploy to github pages
