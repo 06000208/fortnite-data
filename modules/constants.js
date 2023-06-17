@@ -87,7 +87,6 @@ export const template = {
         },
     },
     "items": {},
-    "unknown_items": {},
     "files": {},
 };
 
