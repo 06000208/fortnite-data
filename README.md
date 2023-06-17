@@ -2,13 +2,22 @@
 
 Structured data processed from the [fortnite.fandom.com](https://fortnite.fandom.com) wiki.
 
-This is a work in progress. There are no functional releases, hence no data, either.
-
 # Data Download / CDN
 
-Not currently available. Come back later.
+This is a work in progress, and the structure/contents of this data may change at any time.
+
+Currently only contains data on cosmetics and a limited set of file URIs.
+
+- [github pages](06000208.github.io/fortnite-data/fortnite.json)
+- [jsdelivr.net](https://cdn.jsdelivr.net/gh/06000208/fortnite-data@data/fortnite.json)
 
 These files are provided under Attribution-ShareAlike 3.0 Unported ([Plain text legal code](./public/LICENSE), [Legal code](http://creativecommons.org/licenses/by-sa/3.0/legalcode), [Summary](http://creativecommons.org/licenses/by-sa/3.0/)), as they are adapted from the material provided by the [fortnite.fandom.com](https://fortnite.fandom.com) wiki. All data is sourced directly from the wiki prior to being heavily modified by this project. Refer to their [Copyrights](https://fortnite.fandom.com/wiki/Fortnite_Wiki:Copyrights) page for more information.
+
+# Software / Repository
+
+Read the code at your own risk, it's messy, and was cobbled together for this highly specific purpose. It contains a lot of small band-aid solutions to make things parse as they should or ignore edge cases, and isn't an example to follow.
+
+After installing node.js and npm, the NPM scripts have each step needed to run it. It was designed to run via github actions.
 
 # Licenses
 
